@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from 'next/font/local';
 import "./globals.scss";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const myFont = localFont({
+  variable: "--font-my-font",
+  src: "../../public/fonts/YouSheBiao.ttf",
 });
 
 const geistMono = Geist_Mono({
@@ -23,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${myFont.variable}`}>
       <body>{children}</body>
     </html>
   );

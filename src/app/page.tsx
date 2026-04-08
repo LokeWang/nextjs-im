@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { Button, DatePicker, Space } from "antd";
 import styles from "./page.module.scss";
 
 export default function Home() {
@@ -15,8 +18,16 @@ export default function Home() {
         />
 
         <div>
-           <p className="text-red-500 text-2xl">测试测试赛东方红</p>
-           <Image
+          <p className="text-red-500 text-2xl">测试测试赛东方红</p>
+          <Space orientation="vertical" size="middle">
+            <Space wrap>
+              <Button type="primary">AntD Primary</Button>
+              <Button>AntD Default</Button>
+              <Button type="dashed">AntD Dashed</Button>
+            </Space>
+            <DatePicker />
+          </Space>
+          <Image
           src="/images/next.svg"
           alt="Next.js logo"
           width={100}

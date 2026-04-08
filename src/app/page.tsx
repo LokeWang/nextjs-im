@@ -15,7 +15,7 @@ export default function Home() {
         />
 
         <div>
-           <p>测试测试赛东方红</p>
+           <p className="text-red-500 text-2xl">测试测试赛东方红</p>
            <Image
           src="/images/next.svg"
           alt="Next.js logo"
